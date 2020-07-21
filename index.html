@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio latam js 5</title>
+</head>
+<body>
+    <script>
+
+
+/* 1. Solicitar al usuario un número entre 1 al 100. Luego, se deberá imprimir por consola los números
+desde el 0 hasta el número que ingresó el usuario. */
+let ingresoNumero1100Usuario = +prompt("Ingrese número entre 1 al 100")();
+
+for ( let i = 0 ; i < ingresoNumero1100Usuario; i++ )
+{
+    alert = (" numero " + i);
+};
+
+
+    //ejercicio 2 solicito ingresar caballo blanco en caso que no sea el texto"blanco" entra en un bucle indefinido hasta que ingrese blanco
+    
+    let caballoBlanco = "blanco";
+// solicito ingreso  caballo luego lo paso a minuscula
+    let ingresoCaballoUsuario = prompt("Ingrese Caballo blanco de napoleon").toLowerCase();
+    //bucle infinito   que dura mientras no sea distinto a blanco.
+        while (ingresoCaballoUsuario !== "blanco") {
+            ingresoCaballoUsuario = prompt("Ingrese Caballo blanco de napoleon nuevamente recuerda es blanco").toLowerCase();
+           
+        }
+        console.log(ingresoCaballoUsuario);
+    </script>
+</body>
+</html>
