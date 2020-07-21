@@ -58,9 +58,9 @@
         // creo funcion para sumar a un arreglo los textos frutas que ingrese un usuario a especcion de las manzanas
         function SumarFrutas() {
             let FrutasSinManzanas = [];
-        //    let FrutasSinManzanas2 = [];
+            //    let FrutasSinManzanas2 = [];
             let FrutasConManzanas2 = [];
-        // pido tres  ingresos de fruta
+            // pido tres  ingresos de fruta
             for (let i = 0; i < 3; i++) {
 
                 let frutaIngresada = prompt("Ingrese Fruta").toLowerCase();
@@ -68,18 +68,18 @@
                 FrutasConManzanas2.push(frutaIngresada)
             };
             //se recorre el arreglo para ver la cantidades de fruta
-                FrutasConManzanas2.forEach(function (element) {
+            FrutasConManzanas2.forEach(function (element) {
 
-                    if (element != "manzana") {
+                if (element != "manzana") {
                     FrutasSinManzanas.push(element)
-                    };
+                };
 
-                });
+            });
 
-                /* //opcion para filtral desde origen
-                                if (frutaIngresada != "manzana") {
-                                    FrutasSinManzanas2.push(frutaIngresada);
-                                }; */
+            /* //opcion para filtral desde origen
+                            if (frutaIngresada != "manzana") {
+                                FrutasSinManzanas2.push(frutaIngresada);
+                            }; */
 
             console.log("frutas ingresadas sin manzanas son las siguientes " + FrutasSinManzanas);
         };
@@ -90,12 +90,24 @@
         consonantes que tiene dicho nombre y mostrarlos por pantalla (utilice alert()). */
 
 /*         Solicite al usuario escribir su nombre. Luego, debe determinar la cantidad de vocales y
-consonantes que tiene dicho nombre y mostrarlos por pantalla (utilice alert()) */ç
+consonantes que tiene dicho nombre y mostrarlos por pantalla (utilice alert()) */
+        function buscarVocales() {
+            //Patrón de búsqueda
+            const vocales = /[aeiou]/g;
+            let nombreUsuario = prompt("Ingrese su nombre").toLowerCase();
 
+            let vocalesNombreUsuario = nombreUsuario.match(vocales);
+            console.log(vocalesNombreUsuario);
 
-let nombreUsuario = prompt("Ingrese su nombre").toLowerCase();
+            let cantidadVocales = vocalesNombreUsuario.length;
+            console.log(cantidadVocales);
+            alert(`Cantidad Vocales  es: ${cantidadVocales}`);
 
-
+            let cantidadConsonantes = nombreUsuario.length - cantidadVocales;
+            console.log(cantidadConsonantes);
+            alert(`Cantidad Consonantes  es: ${cantidadConsonantes}`);
+        };
+        buscarVocales();
     </script>
 </body>
 
