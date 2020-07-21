@@ -55,26 +55,46 @@
         por consola, a excepción de la que tenga el nombre de “manzana”
          */
 
-         // creo funcion para sumar a un arreglo los textos frutas que ingrese un usuario a especcion de las manzanas
-         function SumarFrutas() {
-            let FrutasSinManzanas2 =[];
-            let FrutasConManzanas2 =[];
+        // creo funcion para sumar a un arreglo los textos frutas que ingrese un usuario a especcion de las manzanas
+        function SumarFrutas() {
+            let FrutasSinManzanas = [];
+        //    let FrutasSinManzanas2 = [];
+            let FrutasConManzanas2 = [];
+        // pido tres  ingresos de fruta
             for (let i = 0; i < 3; i++) {
 
-                let frutaIngresada = prompt("Ingrese Fruta");
-                FrutasConManzanas2.push(frutaIngresada);
-                if (frutaIngresada != "manzana") {
-                    FrutasSinManzanas2.push(frutaIngresada);
-                };
-                
+                let frutaIngresada = prompt("Ingrese Fruta").toLowerCase();
+                ;
+                FrutasConManzanas2.push(frutaIngresada)
             };
-            console.log(FrutasSinManzanas2);
-         };
-         SumarFrutas();
+            //se recorre el arreglo para ver la cantidades de fruta
+                FrutasConManzanas2.forEach(function (element) {
+
+                    if (element != "manzana") {
+                    FrutasSinManzanas.push(element)
+                    };
+
+                });
+
+                /* //opcion para filtral desde origen
+                                if (frutaIngresada != "manzana") {
+                                    FrutasSinManzanas2.push(frutaIngresada);
+                                }; */
+
+            console.log("frutas ingresadas sin manzanas son las siguientes " + FrutasSinManzanas);
+        };
+        SumarFrutas();
 
 
-/*          Solicite al usuario escribir su nombre. Luego, debe determinar la cantidad de vocales y
-consonantes que tiene dicho nombre y mostrarlos por pantalla (utilice alert()). */
+        /*          Solicite al usuario escribir su nombre. Luego, debe determinar la cantidad de vocales y
+        consonantes que tiene dicho nombre y mostrarlos por pantalla (utilice alert()). */
+
+/*         Solicite al usuario escribir su nombre. Luego, debe determinar la cantidad de vocales y
+consonantes que tiene dicho nombre y mostrarlos por pantalla (utilice alert()) */ç
+
+
+let nombreUsuario = prompt("Ingrese su nombre").toLowerCase();
+
 
     </script>
 </body>
